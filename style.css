@@ -224,3 +224,23 @@ footer {
         font-size: 32px;
     }
 }
+/* Show only the selected section */
+
+section {
+    display: none;
+}
+
+/* Show selected section */
+section:target {
+    display: block;
+}
+
+/* Show Home by default */
+body:not(:has(section:target)) #home {
+    display: flex;
+}
+
+/* Keep Home layout when selected */
+#home:target {
+    display: flex;
+}
